@@ -77,16 +77,16 @@ function listToArray(list){
 
 var myList = {value: 10, rest: {value: 20, rest: null}};
 
-function nth(num, list){
-  for (var node = list; node; node = node.rest){
-    if(node.value == num){
-      return node.value;
-    }
-  }
+function nth(list, index){
+  if(!list)
+    return undefined;
+  else if (n == 0)
+    return list.value;
+  else
+    return nth(list.rest, n-1)
 }
 
-
-console.log(nth(arrayToList([10, 20, 30]), 1))
+console.log(arrayToList([10, 20, 30]))
 
 
 
